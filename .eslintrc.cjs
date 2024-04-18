@@ -1,0 +1,33 @@
+module.exports = {
+  root: true,
+  env: { browser: true, es2020: true },
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+    'plugin:react-hooks/recommended',
+  ],
+  ignorePatterns: ['dist', '.eslintrc.cjs', 'src'],
+  parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
+  settings: { react: { version: '18.2' } },
+  plugins: ['react-refresh'],
+  rules: {
+    'react/jsx-no-target-blank': 'off',
+    'react-refresh/only-export-components': [
+      'warn',
+      { allowConstantExport: true },
+    ],
+    'arrow-parens': ['warn', 'as-needed'],
+    'arrow-spacing': ['warn', { before: true, after: true }],
+    'block-spacing': ['warn', 'always'],
+    'brace-style': ['warn', '1tbs'],
+    'comma-spacing': ['warn', { before: false, after: true }],
+    'comma-style': ['warn', 'last'],
+    'eol-last': ['warn', 'always'],
+    'function-call-argument-newline': ['warn', 'consistent'],
+    'lines-around-comment': ['warn', { beforeBlockComment: true }],
+    'yield-star-spacing': ['warn', 'after'],
+    'multiline-ternary': ['warn', 'always-multiline'],
+    'quotes': ['error', 'single'],
+  },
+}
